@@ -115,7 +115,7 @@ router.post("/login", (req, res, next) => {
     .catch((err) => res.status(500).json({ message: "Internal Server Error" }));
 });
 
-// GET  /auth/verify
+// GET  /api/verify
 router.get("/verify", isAuthenticated, (req, res, next) => {
   // <== CREATE NEW ROUTE
 

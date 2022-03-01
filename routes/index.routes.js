@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const authRoutes = require("./auth.routes");
+const claimsRoutes = require("./claims.routes");
 
 /* GET home page */
 
@@ -8,5 +9,6 @@ router.get("/", (req, res, next) => {
 });
 
 router.use("/", authRoutes);
+router.use("/claims", claimsRoutes);
 
 module.exports = router;
